@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div>
-      <AddTask @onAddTask="addTask" />
+      <AddTask @onAddTask="addTask" :newTask="newTask"/>
       <TaskList :tasks="tasks"/>
     </div>
   </div>

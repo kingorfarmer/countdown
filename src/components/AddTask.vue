@@ -1,22 +1,25 @@
 <template>
 
     <div>
-        <input type="text" v-model="name">
-        <button @click="$emit('onAddTask')">Add Task</button>
+        <input type="text" v-model="newTask.name">
+        <button class="form-button" @click="$emit('onAddTask')">Add Task</button>
     </div>
 
 </template>
 
 <script>
     export default {
+        props: ['newTask'],
         data() {
             return {
-                name: ''
+                
             }
-        }
+        },
     }
 </script>
 
-<style>
-
+<style lang="postcss">
+    .form-button {
+        @apply bg-blue-600 text-white p-2.5;
+    }
 </style>
