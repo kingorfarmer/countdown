@@ -3,6 +3,7 @@
             <div>
                 <AddTask @onAddTask="addTask" :newTask="newTask"/>
                 <TaskList @onDeleteTask="deleteTask" :tasks="tasks"/>
+                <DemoSlot />
             </div>
     </div>
 </template>
@@ -11,6 +12,7 @@
 
 import AddTask from "./components/AddTask.vue";
 import TaskList from "./components/TaskList.vue";
+import DemoSlot from "./components/DemoSlots.vue";
 
 export default {
   data() {
@@ -22,6 +24,7 @@ export default {
   components: {
     AddTask,
     TaskList,
+    DemoSlot
   },
   methods: {
     addTask(name) {
